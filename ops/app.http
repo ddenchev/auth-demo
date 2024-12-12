@@ -1,0 +1,29 @@
+### Get the "Auth" app Id
+GET http://localhost:8080/apps/00000000-0000-0000-0000-000000000000
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+> {% client.global.set("authAppId", response.body.id); %}
+
+
+### Create a new App
+POST {{host}}/apps
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "appName": "TestApp G"
+}
+
+
+### Get an App by ID
+GET http://localhost:8080/apps/{{authAppId}}
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+
+
+### Get a listing of Apps
+GET http://localhost:8080/apps?offset=0&limit=20
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}

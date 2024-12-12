@@ -1,0 +1,8 @@
+:authorization-plugin
+authorization-plugin/src/main/kotlin
+authorization-plugin/src/main/java
+
+authorization-plugin/build/classes/kotlin/main
+authorization-plugin/build/classes/java/main
+
+authorization-plugin/build/kover/bin-reports/test.ic

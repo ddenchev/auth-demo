@@ -1,0 +1,41 @@
+### Get a listing of Roles
+GET {{host}}/apps/{{authAppId}}/roles?offset=0&limit=10
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+### Create a new Role
+POST {{host}}/apps/{{authAppId}}/roles
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "name": "Role 2",
+  "description": "Has the ability to manage all apps on the server."
+}
+
+> {% client.global.set("newRoleId", response.body.id); %}
+
+### Create a new Role
+POST {{host}}/apps/{{authAppId}}/roles
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "name": "App Owner",
+  "description": "Has the ability to create apps and manage the apps they have created."
+}
+
+### Add a permission to the new role
+PUT {{host}}/roles/{{newRoleId}}/permissions
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "permissionIds": ["10e513a2-dce5-447f-94a2-5edea6bb05a2"]
+}
+
+### Get all permissions associated with the role
+GET {{host}}/roles/{{newRoleId}}/permissions
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+

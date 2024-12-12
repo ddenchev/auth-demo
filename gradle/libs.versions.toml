@@ -1,0 +1,68 @@
+[versions]
+kotlin = "2.1.0"
+kotlinx-datetime = "0.6.1"
+kotlinx-serialization = "1.7.3"
+kotlinx-kover = "0.8.3"
+ktor = "3.0.2"
+ktor-swagger-ui = "4.1.0"
+logback = "1.5.12"
+slf4j = "2.0.16"
+postgres = "42.7.4"
+jooq-lib = "3.19.16"
+jooq-plugin = "9.0"
+dotenv = "6.4.2"
+dotenv-gradle-plugin = "4.0.0"
+aws-sdk = "1.3.91"
+flyway = "11.0.1"
+hikari = "6.2.1"
+mockk = "1.13.13"
+coroutine-test = "1.9.0"
+gcp-artifactregistry = "2.2.3"
+npm-publish = "3.4.3"
+
+[libraries]
+dotenv-kotlin = { group = "io.github.cdimascio", name = "dotenv-kotlin", version.ref = "dotenv" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-server-core-jvm = { group = "io.ktor", name = "ktor-server-core-jvm", version.ref = "ktor" }
+ktor-server-netty-jvm = { group = "io.ktor", name = "ktor-server-netty-jvm", version.ref = "ktor" }
+ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-server-compression = { group = "io.ktor", name = "ktor-server-compression", version.ref = "ktor" }
+ktor-server-status-pages = { group = "io.ktor", name = "ktor-server-status-pages", version.ref = "ktor" }
+ktor-server-auth = { group = "io.ktor", name = "ktor-server-auth", version.ref = "ktor" }
+ktor-server-auth-jwt = { group = "io.ktor", name = "ktor-server-auth-jwt", version.ref = "ktor" }
+ktor-server-cors = {group = "io.ktor", name = "ktor-server-cors", version.ref = "ktor"}
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-client-js = { group = "io.ktor", name = "ktor-client-js", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-encoding = { group = "io.ktor", name = "ktor-client-encoding", version.ref = "ktor" }
+ktor-swagger-ui = { group = "io.github.smiley4", name = "ktor-swagger-ui", version.ref = "ktor-swagger-ui" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+slf4j = {group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j"}
+ktor-server-call-logging = { group = "io.ktor", name = "ktor-server-call-logging", version.ref = "ktor" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgres" }
+jooq = { group = "org.jooq", name = "jooq", version.ref = "jooq-lib" }
+hikari = { group = "com.zaxxer", name = "HikariCP", version.ref = "hikari" }
+aws-ses-jvm = { group = "aws.sdk.kotlin", name = "ses-jvm", version.ref = "aws-sdk" }
+flyway-database-postgresql = {group = "org.flywaydb", name = "flyway-database-postgresql", version.ref = "flyway"}
+
+# testing
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+kotlinx-coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine-test"}
+ktor-server-test-host = { group = "io.ktor", name = "ktor-server-test-host", version.ref = "ktor" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk"}
+
+[plugins]
+multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
+jooq = { id = "nu.studer.jooq", version.ref = "jooq-plugin" }
+flyway = { id = "org.flywaydb.flyway", version.ref = "flyway" }
+kotlinx-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kotlinx-kover"  }
+dotenv-gradle = { id = "co.uzzu.dotenv.gradle", version.ref = "dotenv-gradle-plugin"}
+maven-publish = { id = "maven-publish" }
+gcp-artifactregistry = { id = "com.google.cloud.artifactregistry.gradle-plugin", version.ref = "gcp-artifactregistry" }
+npm-publish = { id = "dev.petuska.npm.publish", version.ref = "npm-publish"}

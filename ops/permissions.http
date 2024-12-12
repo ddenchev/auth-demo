@@ -1,0 +1,22 @@
+### Get a listing of Permissions for the current App
+GET {{host}}/permissions?offset=0&limit=20
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+
+### Get a listing of Permissions
+GET {{host}}/apps/{{authAppId}}/permissions?offset=0&limit=100
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+### Create a new Permission
+POST {{host}}/apps/{{authAppId}}/permissions
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "resource": "permission",
+  "action": "flex"
+}
+
+> {% client.global.set("permissionId", response.body.id); %}

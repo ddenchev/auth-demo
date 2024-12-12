@@ -1,0 +1,38 @@
+### Create a new User
+POST {{host}}/apps/00000000-0000-0000-0000-000000000000/users
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "username": "ddenchev4",
+  "email": "doichin.denchev@gmail.com",
+  "firstName": "Doichin",
+  "lastName": "Denchev"
+}
+
+> {% client.global.set("newUserId", response.body.id); %}
+
+### Set User Password
+POST {{host}}/users/password_reset/9f6df656b2afe4f9c9a5908f791a99b2
+Content-Type: application/json
+
+{
+  "password": "abcefghijk123#"
+}
+
+### Get User by ID
+GET http://localhost:8080/users/dac414d4-8e4e-42bc-aa22-2fd6e98ab4cc
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+
+### List Users
+GET http://localhost:8080/users/
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+
+### Add role to user
+POST {{host}}/user/{{newUserId}}/role/2c04b447-8afd-4824-b43e-db0810d8e7f5
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}

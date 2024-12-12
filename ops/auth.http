@@ -1,0 +1,25 @@
+### User login
+POST http://localhost:8080/apps/auth/users/login
+Content-Type: application/json
+
+{
+  "username": "{{rootUser}}",
+  "password": "{{rootUserPassword}}"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+
+### Get Current User
+GET http://localhost:8080/users/me
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+### Bad User Login
+POST http://localhost:8080/apps/auth/users/login
+Content-Type: application/json
+
+{
+  "username": "fake",
+  "password": "fake"
+}

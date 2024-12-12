@@ -1,0 +1,4 @@
+### Get a listing of Permissions for the current App
+GET {{host}}/resources?offset=0&limit=20
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
